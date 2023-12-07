@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
-
 import com.academia.modelo.Estudiante;
 import com.academia.repositorio.EstudianteRepositorio;
 
@@ -24,9 +23,10 @@ public class EstudianteServicio {
 		return repositorio.findById(id).get();	
 	}
 	
-	public void guardarEstudiante(Estudiante datosEstudiante) {
-		repositorio.save(datosEstudiante);
+	public Estudiante guardarEstudiante(Estudiante datosEstudiante) {
+		return repositorio.save(datosEstudiante);
 	}
+
 
 	public List<Estudiante> obtenerEstudianteByCedula(String cedula){
 		return repositorio.findByCedulaEquals(cedula);
