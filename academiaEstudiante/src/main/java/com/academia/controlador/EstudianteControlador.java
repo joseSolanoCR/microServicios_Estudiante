@@ -25,7 +25,7 @@ public class EstudianteControlador {
 	
 	@GetMapping("/estudiantes")
 	public List<Estudiante> listarEstudiantes(){
-		return servicio.listarEstudiantes();
+		return servicio.listarEstudiantes(); 
 	}
 	
 	@GetMapping("/estudiante/{id}")
