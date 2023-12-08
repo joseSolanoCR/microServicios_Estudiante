@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import org.springframework.boot.context.properties.bind.Name;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
@@ -26,8 +27,10 @@ public class Estudiante {
 	private String apellidopaterno;
 	private String apellidomaterno;
 	private String nacionalidad;
+	@Column(name="idcarreras")
 	private Integer idCarreras;
 	private String usuario;
+
 	
 	public Estudiante(Integer id, String cedula, String correoelectronico, String telefono, String telefonocelular,
 			Date fechanacimiento, String sexo, String direccion, String nombre, String apellidopaterno,
